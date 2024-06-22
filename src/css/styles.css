@@ -5,6 +5,7 @@
   |============================
 */
 @import url('./reset.css');
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -20,4 +21,119 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: slateblue;
+}
+
+.search-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.search-form button i {
+  font-size: 16px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.photo-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  max-height: 240px; /* Ensure all images have the same height */
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+  display: block;
+  border-radius: 4px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.info-item {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.load-more {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hide {
+  visibility: hidden;
+  height: 0;
+  clip: rect(0,0,0,0);
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.loader-wrapper {
+  min-width: 100%;
+  display: flex;
+}
+
+.loader {
+  margin: 50px auto;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #000;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
 }
