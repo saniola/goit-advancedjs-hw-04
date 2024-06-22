@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Search App</title>
+  <link rel="icon" href="/goit-advancedjs-hw-04/favicon.svg" type="image/x-icon">
+  
+  <script type="module" crossorigin src="/goit-advancedjs-hw-04/commonHelpers.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-0fc460d7.js">
+  <link rel="stylesheet" href="/goit-advancedjs-hw-04/assets/vendor-4b066c51.css">
+  <link rel="stylesheet" href="/goit-advancedjs-hw-04/assets/index-43d3cccd.css">
+</head>
+<body>
+  <form class="search-form" id="search-form">
+    <input
+      type="text"
+      name="searchQuery"
+      autocomplete="off"
+      placeholder="Search images..."
+    />
+    <button type="submit"><i class="fas fa-magnifying-glass"></i></button>
+  </form>
+
+  <div class="gallery">
+    <!-- Image cards will be rendered here -->
+  </div>
+
+  <div class="loader-wrapper hide">
+    <span class="loader"></span>
+  </div>
+
+  <button type="button" class="load-more hide">Load more</button>
+
+  
+</body>
+</html>
