@@ -20,10 +20,10 @@ const hideLoader = () => loader.classList.add('hide');
 const lightbox = new SimpleLightbox('.gallery a', {});
 
 searchForm.addEventListener('submit', async event => {
-	event.preventDefault();
-	gallery.innerHTML = '';
-	currentPage = 1;
-	currentQuery = event.target.searchQuery.value.trim();
+  event.preventDefault();
+  gallery.innerHTML = '';
+  currentPage = 1;
+  currentQuery = event.target.searchQuery.value.trim();
 
   showLoader();
   hideLoadMoreBtn();
@@ -56,7 +56,7 @@ searchForm.addEventListener('submit', async event => {
 });
 
 loadMoreBtn.addEventListener('click', async () => {
-	currentPage += 1;
+  currentPage += 1;
   showLoader();
 
   try {
@@ -74,11 +74,11 @@ loadMoreBtn.addEventListener('click', async () => {
   }
 
   const { height: cardHeight } =
-  gallery.firstElementChild.getBoundingClientRect();
+    gallery.firstElementChild.getBoundingClientRect();
 
   window.scrollBy({
     top: cardHeight * 2,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
 });
 
@@ -122,11 +122,10 @@ function handleData(data) {
   lightbox.refresh();
 }
 
-
 function renderGallery(images) {
-	const markup = images
-		.map(
-			image => `
+  const markup = images
+    .map(
+      image => `
     <a href="${image.largeImageURL}" class="photo-card">
       <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
       <div class="info">
@@ -144,9 +143,9 @@ function renderGallery(images) {
         </p>
       </div>
     </a>
-  `,
-		)
-		.join('');
+  `
+    )
+    .join('');
 
-	gallery.insertAdjacentHTML("beforeend", markup);
+  gallery.insertAdjacentHTML('beforeend', markup);
 }

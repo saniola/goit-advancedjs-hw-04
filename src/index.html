@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Search App</title>
-  <link rel="icon" href="/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-  <form class="search-form" id="search-form">
-    <input
-      type="text"
-      name="searchQuery"
-      autocomplete="off"
-      placeholder="Search images..."
-    />
-    <button type="submit"><i class="fas fa-magnifying-glass"></i></button>
-  </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Search App</title>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+      <button type="submit"><i class="fas fa-magnifying-glass"></i></button>
+    </form>
 
-  <div class="gallery">
-    <!-- Image cards will be rendered here -->
-  </div>
+    <div class="gallery">
+      <!-- Image cards will be rendered here -->
+    </div>
 
-  <div class="loader-wrapper hide">
-    <span class="loader"></span>
-  </div>
+    <div class="loader-wrapper hide">
+      <span class="loader"></span>
+    </div>
 
-  <button type="button" class="load-more hide">Load more</button>
+    <button type="button" class="load-more hide">Load more</button>
 
-  <script src="./js/main.js" type="module"></script>
-</body>
+    <script src="./js/main.js" type="module"></script>
+  </body>
 </html>
